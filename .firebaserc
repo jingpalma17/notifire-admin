@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "notifire-2ef7a": {
+      "hosting": {
+        "notifire-admin": [
+          "notifire-2ef7a"
+        ]
+      }
+    }
+  }
+}
