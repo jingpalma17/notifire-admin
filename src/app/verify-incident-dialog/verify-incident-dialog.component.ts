@@ -16,8 +16,7 @@ export class VerifyIncidentDialogComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      addressLine1: new FormControl(''),
-      addressLine2: new FormControl(''),
+      message: new FormControl(''),
       zone: new FormControl(''),
     });
   }

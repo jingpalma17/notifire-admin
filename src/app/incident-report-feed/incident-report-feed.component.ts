@@ -10,7 +10,7 @@ import { VerifyIncidentDialogComponent } from '../verify-incident-dialog/verify-
   styleUrls: ['./incident-report-feed.component.scss'],
 })
 export class IncidentReportFeedComponent implements OnInit {
-  feeds;
+  reports;
 
   constructor(
     private firebaseService: FirebaseService,
@@ -19,14 +19,14 @@ export class IncidentReportFeedComponent implements OnInit {
 
   ngOnInit() {
     this.firebaseService.getIncidentReportFeed().subscribe(result => {
-      this.feeds = result;
+      this.reports = result;
     });
   }
 
   verifyIncident() {
     this.dialog
       .open(VerifyIncidentDialogComponent, {
-        width: '280px',
+        width: '400px',
       })
       .afterClosed()
       .subscribe(result => {

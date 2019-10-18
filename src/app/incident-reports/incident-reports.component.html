@@ -1,9 +1,10 @@
-<div class="feed-list">
-  <ng-container *ngFor="let feed of feeds">
-    <mat-card (click)="sendMessageNotif()">
+<h2 class="title">Incident reports</h2>
+<div class="report-list">
+  <ng-container *ngFor="let report of reports">
+    <mat-card class="card" (click)="sendMessageNotif()">
       <mat-card-content>
-        {{ feed.payload.doc.data().firstname }}
-        {{ feed.payload.doc.data().lastname }}
+        {{ report.payload.doc.data().firstname }}
+        {{ report.payload.doc.data().lastname }}
       </mat-card-content>
     </mat-card>
   </ng-container>
