@@ -1,19 +1,19 @@
 <div class="page-container">
-	<div class="side-bar">
-		<ul class="nav flex-column">
-	  	<li class="nav-item">
-	    	<a class="nav-link active" routerLink="home">
+  <div class="side-bar">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="incident-report-feed">
           <mat-icon>search</mat-icon>
-				</a>
-	  	</li>
-	  	<li class="nav-item">
-	    	<a class="nav-link" routerLink="new-user">
-					<mat-icon>search</mat-icon>
-				</a>
-	  	</li>
-		</ul>
-	</div>
-	<div class="content-container">
- 		<router-outlet></router-outlet>
-	</div>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="incident-reports">
+          <mat-icon>search</mat-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
 </div>

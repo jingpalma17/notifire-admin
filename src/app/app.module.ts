@@ -14,12 +14,14 @@ import { IncidentReportFeedComponent } from './incident-report-feed/incident-rep
 import { environment } from '../environments/environment';
 import { FirebaseService } from './services/firebase.service';
 import { VerifyIncidentDialogComponent } from './verify-incident-dialog/verify-incident-dialog.component';
+import { IncidentReportsComponent } from './incident-reports/incident-reports.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IncidentReportFeedComponent,
     VerifyIncidentDialogComponent,
+    IncidentReportsComponent,
   ],
   imports: [
     BrowserModule,
