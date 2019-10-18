@@ -1,0 +1,10 @@
+<div class="feed-list">
+  <ng-container *ngFor="let feed of feeds">
+    <mat-card (click)="verifyIncident()">
+      <mat-card-content>
+        {{ feed.payload.doc.data().firstname }}
+        {{ feed.payload.doc.data().lastname }}
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
