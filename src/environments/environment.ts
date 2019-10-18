@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyD4eiRzboUV_aYb4L0aPncKFpezZjC48GQ',
+    authDomain: 'notifire-2ef7a.firebaseapp.com',
+    databaseURL: 'https://notifire-2ef7a.firebaseapp.com',
+    projectId: 'notifire-2ef7a',
+    storageBucket: '',
+    messagingSenderId: '220239233553',
+  },
 };
 
 /*
