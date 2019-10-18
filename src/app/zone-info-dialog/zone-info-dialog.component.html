@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Create zone</h2>
+<p></p>
+<mat-dialog-content>
+  <form [formGroup]="form" layout="column">
+    <mat-form-field>
+      <input
+        matInput="matInput"
+        placeholder="Address line 1"
+        formControlName="addressLine1"
+        maxlength="100"
+      />
+      <mat-error *ngIf="form.controls.addressLine1.invalid"
+        >Please enter address line 1.</mat-error
+      >
+    </mat-form-field>
+    <span flex="5"></span>
+    <mat-form-field>
+      <input
+        matInput="matInput"
+        placeholder="Address Line 2"
+        formControlName="addressLine2"
+        maxlength="100"
+      />
+      <mat-error *ngIf="form.controls.addressLine2.invalid"
+        >Please enter address line 2.</mat-error
+      >
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <!--
+    The mat-dialog-close directive optionally accepts a value as a result for the dialog.
+  -->
+  <button mat-button [mat-dialog-close]="true">
+    Create
+  </button>
+</mat-dialog-actions>
