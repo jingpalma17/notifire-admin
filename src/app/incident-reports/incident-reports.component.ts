@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { FirebaseService } from '../services/firebase.service';
-import { VerifyIncidentDialogComponent } from '../verify-incident-dialog/verify-incident-dialog.component';
+import { MessageNotifDialogComponent } from '../message-notif-dialog/message-notif-dialog.component';
 
 @Component({
   selector: 'app-incident-reports',
@@ -23,9 +23,9 @@ export class IncidentReportsComponent implements OnInit {
     });
   }
 
-  verifyIncident() {
+  sendMessageNotif() {
     this.dialog
-      .open(VerifyIncidentDialogComponent, {
+      .open(MessageNotifDialogComponent, {
         width: '280px',
       })
       .afterClosed()

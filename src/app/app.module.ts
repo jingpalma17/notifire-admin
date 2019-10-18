@@ -15,6 +15,8 @@ import { environment } from '../environments/environment';
 import { FirebaseService } from './services/firebase.service';
 import { VerifyIncidentDialogComponent } from './verify-incident-dialog/verify-incident-dialog.component';
 import { IncidentReportsComponent } from './incident-reports/incident-reports.component';
+import { ZoneInfoDialogComponent } from './zone-info-dialog/zone-info-dialog.component';
+import { MessageNotifDialogComponent } from './message-notif-dialog/message-notif-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { IncidentReportsComponent } from './incident-reports/incident-reports.co
     IncidentReportFeedComponent,
     VerifyIncidentDialogComponent,
     IncidentReportsComponent,
+    ZoneInfoDialogComponent,
+    MessageNotifDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,10 @@ import { IncidentReportsComponent } from './incident-reports/incident-reports.co
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent],
-  entryComponents: [VerifyIncidentDialogComponent],
+  entryComponents: [
+    VerifyIncidentDialogComponent,
+    ZoneInfoDialogComponent,
+    MessageNotifDialogComponent,
+  ],
 })
 export class AppModule {}
