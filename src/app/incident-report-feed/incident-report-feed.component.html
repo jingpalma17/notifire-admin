@@ -1,1 +1,10 @@
-<p>incident-report-feed works!</p>
+<div class="feed-list">
+  <ng-container *ngFor="let feed of feeds">
+    <mat-card>
+      <mat-card-content>
+        {{ feed.payload.doc.data().firstname }}
+        {{ feed.payload.doc.data().lastname }}
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
