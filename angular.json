@@ -128,5 +128,10 @@
       }
     }
   },
-  "defaultProject": "notifire-admin"
+  "defaultProject": "notifire-admin",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
