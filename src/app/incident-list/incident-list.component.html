@@ -1,23 +1,26 @@
 <h2 class="title">Fire Incidents</h2>
-<button
-  mat-raised-button
-  color="accent"
-  color="accent"
-  (click)="createIncident()"
->
-  Create Incident
-</button>
+
 <div class="incident-list">
+  <button
+    mat-raised-button
+    color="accent"
+    color="accent"
+    (click)="createIncident()"
+  >
+    Create Incident
+  </button>
   <ng-container *ngFor="let incident of incidents">
     <mat-card class="card">
       <mat-card-content>
-        <div>Status: {{ incident?.payload?.doc?.data()?.status }}</div>
-        <div>Severity: {{ incident?.payload?.doc?.data()?.severity }}</div>
-        <div>
-          Zones:
-          <span *ngFor="let zone of incident?.payload?.doc?.data()?.zones"
-            >{{ zone }},
-          </span>
+        <div class="details">
+          <div>Status: {{ incident?.payload?.doc?.data()?.status }}</div>
+          <div>Severity: {{ incident?.payload?.doc?.data()?.severity }}</div>
+          <div>
+            Zones:
+            <span *ngFor="let zone of incident?.payload?.doc?.data()?.zones"
+              >{{ zone }},
+            </span>
+          </div>
         </div>
         <button
           mat-raised-button
@@ -25,7 +28,7 @@
           color="accent"
           (click)="sendMessageNotif()"
         >
-          Send Message Alert
+          Send Alert
         </button>
       </mat-card-content>
     </mat-card>

@@ -11,3 +11,16 @@
   height: 70px;
   margin: 20px;
 }
+
+mat-card-content {
+  display: flex;
+  align-items: center;
+
+  .details {
+    flex: 1;
+  }
+}
+
+button {
+  margin-left: 20px;
+}
