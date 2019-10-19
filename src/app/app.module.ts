@@ -18,6 +18,7 @@ import { IncidentListComponent } from './incident-list/incident-list.component';
 import { ZoneInfoDialogComponent } from './zone-info-dialog/zone-info-dialog.component';
 import { MessageNotifDialogComponent } from './message-notif-dialog/message-notif-dialog.component';
 import { ZoneListComponent } from './zone-list/zone-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ZoneListComponent } from './zone-list/zone-list.component';
     AngularFirestoreModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent],

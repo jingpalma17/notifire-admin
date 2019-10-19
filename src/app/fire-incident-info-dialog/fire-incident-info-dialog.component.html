@@ -23,7 +23,7 @@
       >
         <mat-option
           *ngFor="let zone of zones"
-          [value]="zone?.payload?.doc?.data()?.code"
+          [value]="zone?.payload?.doc?.data()"
         >
           {{ zone?.payload?.doc?.data()?.name }}
         </mat-option>

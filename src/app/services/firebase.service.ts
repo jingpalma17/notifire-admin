@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FirebaseService {
-  constructor(public db: AngularFirestore) {}
+  constructor(public db: AngularFirestore, private http: HttpClient) {}
+
+  sendSMS(data) {
+    return this.http.post<{}>(
+      'https://a5d1fdb4.ngrok.io/api/zones/send-fire-alerts',
+      data,
+    );
+  }
 
   getFireReports() {
     return this.db.collection('fire_reports').snapshotChanges();

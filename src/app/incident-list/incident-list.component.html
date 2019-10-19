@@ -14,11 +14,10 @@
       <mat-card-content>
         <div class="details">
           <div>Status: {{ incident?.payload?.doc?.data()?.status }}</div>
-          <div>Severity: {{ incident?.payload?.doc?.data()?.severity }}</div>
           <div>
             Zones:
             <span *ngFor="let zone of incident?.payload?.doc?.data()?.zones"
-              >{{ zone }},
+              >{{ zone?.name }},
             </span>
           </div>
         </div>
@@ -26,9 +25,9 @@
           mat-raised-button
           color="accent"
           color="accent"
-          (click)="sendMessageNotif()"
+          (click)="sendMessageNotif(incident?.payload?.doc?.data()?.zones)"
         >
-          Send Alert
+          Send Fire Alert
         </button>
       </mat-card-content>
     </mat-card>

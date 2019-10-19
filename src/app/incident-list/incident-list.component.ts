@@ -24,10 +24,11 @@ export class IncidentListComponent implements OnInit {
     });
   }
 
-  sendMessageNotif() {
+  sendMessageNotif(zones) {
     this.dialog
       .open(MessageNotifDialogComponent, {
         width: '400px',
+        data: { zones },
       })
       .afterClosed()
       .subscribe(result => {
