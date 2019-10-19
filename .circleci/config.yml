@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16.3
+
+    working_directory: ~/notifire-admin
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "package-lock.json" }}
+            - dependency-cache-
+
+      - run: npm install
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+
+      - run: npm run build
+
+      - run: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN --only hosting
