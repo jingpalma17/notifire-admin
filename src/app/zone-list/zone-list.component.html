@@ -1,0 +1,9 @@
+<h2 class="title">Zones</h2>
+<button mat-button (click)="addZone()">
+  Add
+</button>
+<div class="zone-list">
+  <ng-container *ngFor="let zone of zones">
+    <div (click)="updateZone(zone)">{{ zone.payload.doc.data().code }}</div>
+  </ng-container>
+</div>
