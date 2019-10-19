@@ -10,6 +10,10 @@
         </div>
         <div class="details">
           <p>{{ report?.payload?.doc?.data()?.details }}</p>
+          <ng-container *ngIf="report?.payload?.doc?.data()?.zone?.description"
+            >Location:
+            {{ report?.payload?.doc?.data()?.zone?.description }}</ng-container
+          >
         </div>
 
         <button

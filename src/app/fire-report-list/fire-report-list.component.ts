@@ -39,14 +39,13 @@ export class FireReportListComponent implements OnInit {
   }
 
   getThumbnail(source) {
-    const placeholder = 'https://placekitten.com/200/300';
     switch (source) {
       case 'app':
-        return 'https://placekitten.com/200/300';
-      case 'mobile':
-        return 'https://placekitten.com/200/300';
-      case 'twitter':
-        return 'https://placekitten.com/200/300';
+        return 'assets/app.png';
+      case 'sms':
+        return 'assets/sms.png';
+      default:
+        return 'assets/sms.png';
     }
   }
 }
