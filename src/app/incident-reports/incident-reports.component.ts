@@ -10,7 +10,7 @@ import { MessageNotifDialogComponent } from '../message-notif-dialog/message-not
   styleUrls: ['./incident-reports.component.scss'],
 })
 export class IncidentReportsComponent implements OnInit {
-  reports;
+  incidents;
 
   constructor(
     private firebaseService: FirebaseService,
@@ -18,8 +18,8 @@ export class IncidentReportsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.firebaseService.getIncidentReportFeed().subscribe(result => {
-      this.reports = result;
+    this.firebaseService.getFireIncidents().subscribe(result => {
+      this.incidents = result;
     });
   }
 

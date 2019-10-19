@@ -18,7 +18,7 @@ export class IncidentReportFeedComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.firebaseService.getIncidentReportFeed().subscribe(result => {
+    this.firebaseService.getFireReports().subscribe(result => {
       this.reports = result;
     });
   }

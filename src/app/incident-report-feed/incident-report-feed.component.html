@@ -1,10 +1,9 @@
-<h2 class="title">Incident report feed</h2>
+<h2 class="title">Fire reports</h2>
 <div class="report-list">
   <ng-container *ngFor="let report of reports">
     <mat-card class="card" (click)="verifyIncident()">
       <mat-card-content>
-        {{ report.payload.doc.data().firstname }}
-        {{ report.payload.doc.data().lastname }}
+        {{ report.payload.doc.data().details }}
       </mat-card-content>
     </mat-card>
   </ng-container>
