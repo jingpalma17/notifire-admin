@@ -36,7 +36,7 @@ export class FireIncidentInfoDialogComponent implements OnInit {
     this.form = new FormGroup({
       status: new FormControl(this.incident.status || ''),
       severity: new FormControl(this.incident.severity || ''),
-      zone: new FormControl(this.incident.zone || ''),
+      zones: new FormControl(this.incident.zone || ''),
     });
 
     this.firebaseService.getZones().subscribe(result => {

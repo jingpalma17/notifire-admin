@@ -11,7 +11,14 @@
   <ng-container *ngFor="let incident of incidents">
     <mat-card class="card">
       <mat-card-content>
-        <div>{{ incident?.payload?.doc?.data()?.status }}</div>
+        <div>Status: {{ incident?.payload?.doc?.data()?.status }}</div>
+        <div>Severity: {{ incident?.payload?.doc?.data()?.severity }}</div>
+        <div>
+          Zones:
+          <span *ngFor="let zone of incident?.payload?.doc?.data()?.zones"
+            >{{ zone }},
+          </span>
+        </div>
         <button
           mat-raised-button
           color="accent"
