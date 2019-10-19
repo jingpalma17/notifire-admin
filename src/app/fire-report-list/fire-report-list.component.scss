@@ -11,3 +11,24 @@
   height: 70px;
   margin: 20px;
 }
+
+mat-card-content {
+  display: flex;
+  align-items: center;
+
+  p {
+    flex: 1;
+    margin: 0 20px;
+  }
+}
+
+.source-image {
+  width: 68px;
+  height: 68px;
+  border-radius: 3px;
+  img {
+    object-fit: cover;
+    width: 68px;
+    height: 68px;
+  }
+}

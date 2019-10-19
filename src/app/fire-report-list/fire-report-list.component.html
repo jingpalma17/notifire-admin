@@ -3,7 +3,12 @@
   <ng-container *ngFor="let report of reports">
     <mat-card class="card">
       <mat-card-content>
-        {{ report.payload.doc.data().details }}
+        <div class="source-image">
+          <img
+            [attr.src]="getThumbnail(report?.payload?.doc?.data()?.source)"
+          />
+        </div>
+        <p>{{ report?.payload?.doc?.data()?.details }}</p>
         <button
           mat-raised-button
           color="accent"
