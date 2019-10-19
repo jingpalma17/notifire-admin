@@ -17,6 +17,7 @@ import { VerifyIncidentDialogComponent } from './verify-incident-dialog/verify-i
 import { IncidentReportsComponent } from './incident-reports/incident-reports.component';
 import { ZoneInfoDialogComponent } from './zone-info-dialog/zone-info-dialog.component';
 import { MessageNotifDialogComponent } from './message-notif-dialog/message-notif-dialog.component';
+import { ZoneListComponent } from './zone-list/zone-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MessageNotifDialogComponent } from './message-notif-dialog/message-noti
     IncidentReportsComponent,
     ZoneInfoDialogComponent,
     MessageNotifDialogComponent,
+    ZoneListComponent,
   ],
   imports: [
     BrowserModule,
