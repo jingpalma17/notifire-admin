@@ -6,7 +6,33 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class FirebaseService {
   constructor(public db: AngularFirestore) {}
-  getIncidentReportFeed() {
-    return this.db.collection('test').snapshotChanges();
+
+  getFireReports() {
+    return this.db.collection('fire_reports').snapshotChanges();
+  }
+  getFireIncidents() {
+    return this.db.collection('fire_incidents').snapshotChanges();
+  }
+
+  getZones() {
+    return this.db.collection('zones').snapshotChanges();
+  }
+
+  getZone(zoneKey) {
+    return this.db
+      .collection('zones')
+      .doc(zoneKey)
+      .snapshotChanges();
+  }
+
+  addZone(zone) {
+    return this.db.collection('zones').add(zone);
+  }
+
+  updateZone(zone) {
+    return this.db
+      .collection('zones')
+      .doc(zone.id)
+      .set(zone);
   }
 }
