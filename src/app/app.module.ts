@@ -13,7 +13,7 @@ import { IncidentReportFeedComponent } from './incident-report-feed/incident-rep
 
 import { environment } from '../environments/environment';
 import { FirebaseService } from './services/firebase.service';
-import { VerifyIncidentDialogComponent } from './verify-incident-dialog/verify-incident-dialog.component';
+import { FireIncidentInfoDialogComponent } from './fire-incident-info-dialog/fire-incident-info-dialog.component';
 import { IncidentReportsComponent } from './incident-reports/incident-reports.component';
 import { ZoneInfoDialogComponent } from './zone-info-dialog/zone-info-dialog.component';
 import { MessageNotifDialogComponent } from './message-notif-dialog/message-notif-dialog.component';
@@ -23,7 +23,7 @@ import { ZoneListComponent } from './zone-list/zone-list.component';
   declarations: [
     AppComponent,
     IncidentReportFeedComponent,
-    VerifyIncidentDialogComponent,
+    FireIncidentInfoDialogComponent,
     IncidentReportsComponent,
     ZoneInfoDialogComponent,
     MessageNotifDialogComponent,
@@ -42,7 +42,7 @@ import { ZoneListComponent } from './zone-list/zone-list.component';
   providers: [FirebaseService],
   bootstrap: [AppComponent],
   entryComponents: [
-    VerifyIncidentDialogComponent,
+    FireIncidentInfoDialogComponent,
     ZoneInfoDialogComponent,
     MessageNotifDialogComponent,
   ],

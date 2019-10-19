@@ -12,7 +12,7 @@ import { FirebaseService } from '../services/firebase.service';
 export class ZoneInfoDialogComponent implements OnInit {
   form: FormGroup;
   zone;
-  title = 'Brand Info';
+  title = 'Zone Info';
   action = 'Apply';
 
   constructor(
@@ -26,7 +26,7 @@ export class ZoneInfoDialogComponent implements OnInit {
       this.zone.id = data.payload.doc.id;
     } else {
       this.zone = {};
-      this.title = 'Add Brand';
+      this.title = 'Add Zone';
       this.action = 'Add';
     }
     this.form = new FormGroup({

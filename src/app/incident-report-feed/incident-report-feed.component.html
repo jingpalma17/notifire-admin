@@ -1,9 +1,17 @@
 <h2 class="title">Fire reports</h2>
 <div class="report-list">
   <ng-container *ngFor="let report of reports">
-    <mat-card class="card" (click)="verifyIncident()">
+    <mat-card class="card">
       <mat-card-content>
         {{ report.payload.doc.data().details }}
+        <button
+          mat-raised-button
+          color="accent"
+          color="accent"
+          (click)="createIncident()"
+        >
+          Create Incident
+        </button>
       </mat-card-content>
     </mat-card>
   </ng-container>

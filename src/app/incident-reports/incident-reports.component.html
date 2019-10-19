@@ -1,9 +1,17 @@
 <h2 class="title">Fire Incidents</h2>
 <div class="incident-list">
   <ng-container *ngFor="let incident of incidents">
-    <mat-card class="card" (click)="sendMessageNotif()">
+    <mat-card class="card">
       <mat-card-content>
         <div>{{ incident?.payload?.doc?.data()?.status }}</div>
+        <button
+          mat-raised-button
+          color="accent"
+          color="accent"
+          (click)="sendMessageNotif()"
+        >
+          Send Message Alert
+        </button>
       </mat-card-content>
     </mat-card>
   </ng-container>

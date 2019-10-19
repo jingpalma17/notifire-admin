@@ -14,6 +14,17 @@ export class FirebaseService {
     return this.db.collection('fire_incidents').snapshotChanges();
   }
 
+  createFireIncident(incident) {
+    return this.db.collection('fire_incidents').add(incident);
+  }
+
+  updateFireIncident(incident) {
+    return this.db
+      .collection('fire_incidents')
+      .doc(incident.id)
+      .set(incident);
+  }
+
   getZones() {
     return this.db.collection('zones').snapshotChanges();
   }
