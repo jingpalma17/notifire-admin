@@ -29,13 +29,17 @@ export class ZoneInfoDialogComponent implements OnInit {
       this.title = 'Add Zone';
       this.action = 'Add';
     }
-    const { x, y } = (this.data && this.data.longLat) || { x: null, y: null };
+    const { long, lat } = (this.data && data.payload.doc.data().longLat) || {
+      long: null,
+      lat: null,
+    };
+    console.log(this.data);
     this.form = new FormGroup({
       code: new FormControl(this.zone.code || ''),
       name: new FormControl(this.zone.name || ''),
       description: new FormControl(this.zone.description || ''),
-      longitude: new FormControl(x || ''),
-      latitude: new FormControl(y || ''),
+      longitude: new FormControl(long || ''),
+      latitude: new FormControl(lat || ''),
     });
   }
 
