@@ -9,12 +9,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './material/material.module';
-import { IncidentReportFeedComponent } from './incident-report-feed/incident-report-feed.component';
+import { FireReportListComponent } from './fire-report-list/fire-report-list.component';
 
 import { environment } from '../environments/environment';
 import { FirebaseService } from './services/firebase.service';
 import { FireIncidentInfoDialogComponent } from './fire-incident-info-dialog/fire-incident-info-dialog.component';
-import { IncidentReportsComponent } from './incident-reports/incident-reports.component';
+import { IncidentListComponent } from './incident-list/incident-list.component';
 import { ZoneInfoDialogComponent } from './zone-info-dialog/zone-info-dialog.component';
 import { MessageNotifDialogComponent } from './message-notif-dialog/message-notif-dialog.component';
 import { ZoneListComponent } from './zone-list/zone-list.component';
@@ -22,9 +22,9 @@ import { ZoneListComponent } from './zone-list/zone-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    IncidentReportFeedComponent,
+    FireReportListComponent,
     FireIncidentInfoDialogComponent,
-    IncidentReportsComponent,
+    IncidentListComponent,
     ZoneInfoDialogComponent,
     MessageNotifDialogComponent,
     ZoneListComponent,

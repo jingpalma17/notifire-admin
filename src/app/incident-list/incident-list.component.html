@@ -1,4 +1,12 @@
 <h2 class="title">Fire Incidents</h2>
+<button
+  mat-raised-button
+  color="accent"
+  color="accent"
+  (click)="createIncident()"
+>
+  Create Incident
+</button>
 <div class="incident-list">
   <ng-container *ngFor="let incident of incidents">
     <mat-card class="card">

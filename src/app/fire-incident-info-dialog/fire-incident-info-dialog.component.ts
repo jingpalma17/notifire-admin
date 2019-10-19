@@ -14,6 +14,7 @@ export class FireIncidentInfoDialogComponent implements OnInit {
   incident;
   title = 'Incident Info';
   action = 'Apply';
+  zones;
 
   constructor(
     private dialogRef: MatDialogRef<FireIncidentInfoDialogComponent>,
@@ -26,7 +27,7 @@ export class FireIncidentInfoDialogComponent implements OnInit {
       this.incident.id = data.payload.doc.id;
     } else {
       this.incident = {};
-      this.title = 'Add Zone';
+      this.title = 'Add Incident';
       this.action = 'Add';
     }
   }
@@ -35,6 +36,11 @@ export class FireIncidentInfoDialogComponent implements OnInit {
     this.form = new FormGroup({
       status: new FormControl(this.incident.status || ''),
       severity: new FormControl(this.incident.severity || ''),
+      zone: new FormControl(this.incident.zone || ''),
+    });
+
+    this.firebaseService.getZones().subscribe(result => {
+      this.zones = result;
     });
   }
 
@@ -46,15 +52,15 @@ export class FireIncidentInfoDialogComponent implements OnInit {
     }
   }
 
-  create(zone) {
-    this.firebaseService.addZone(zone).then(result => {
-      this.dialogRef.close();
+  create(incident) {
+    this.firebaseService.createFireIncident(incident).then(result => {
+      this.dialogRef.close(true);
       this.snackbar.open('Incident added', 'Ok', { duration: 3000 });
     });
   }
 
-  update(zone) {
-    this.firebaseService.updateZone(zone).then(result => {
+  update(incident) {
+    this.firebaseService.updateFireIncident(incident).then(result => {
       this.dialogRef.close(true);
       this.snackbar.open('Incident info updated', 'Ok', { duration: 3000 });
     });
