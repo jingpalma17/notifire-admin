@@ -4,26 +4,13 @@
   <form [formGroup]="form" layout="column">
     <mat-form-field>
       <mat-label>Status</mat-label>
-      <textarea
-        matInput
-        placeholder="Enter a status"
-        required
-        formControlName="status"
-        cdkTextareaAutosize
-        cdkAutosizeMinRows="3"
-      ></textarea>
-    </mat-form-field>
-    <span flex="5"></span>
-    <mat-form-field>
       <mat-select
         matInput="matInput"
-        placeholder="Severity"
-        formControlName="severity"
+        placeholder="Status"
+        formControlName="status"
       >
-        <mat-option value="critical">Critical</mat-option>
-        <mat-option value="high">High</mat-option>
-        <mat-option value="medium">Medium</mat-option>
-        <mat-option value="low">Low</mat-option>
+        <mat-option value="On fire">On fire</mat-option>
+        <mat-option value="Resolved">Resolved</mat-option>
       </mat-select>
     </mat-form-field>
     <span flex="5"></span>

@@ -35,7 +35,6 @@ export class FireIncidentInfoDialogComponent implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       status: new FormControl(this.incident.status || ''),
-      severity: new FormControl(this.incident.severity || ''),
       zones: new FormControl(this.incident.zone || ''),
     });
 
