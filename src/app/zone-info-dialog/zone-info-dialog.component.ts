@@ -29,16 +29,25 @@ export class ZoneInfoDialogComponent implements OnInit {
       this.title = 'Add Zone';
       this.action = 'Add';
     }
+    const { x, y } = (this.data && this.data.longLat) || { x: null, y: null };
     this.form = new FormGroup({
       code: new FormControl(this.zone.code || ''),
       name: new FormControl(this.zone.name || ''),
       description: new FormControl(this.zone.description || ''),
+      longitude: new FormControl(x || ''),
+      latitude: new FormControl(y || ''),
     });
   }
 
   ngOnInit() {}
 
-  save(zone) {
+  save(form) {
+    const zone = {
+      code: form.code,
+      name: form.name,
+      description: form.description,
+      longLat: { long: form.longitude, lat: form.longitude },
+    };
     if (this.zone.id) {
       this.update({ ...zone, id: this.zone.id });
     } else {

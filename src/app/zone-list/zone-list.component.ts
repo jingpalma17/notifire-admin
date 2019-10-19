@@ -10,7 +10,7 @@ import { ZoneInfoDialogComponent } from '../zone-info-dialog/zone-info-dialog.co
   styleUrls: ['./zone-list.component.scss'],
 })
 export class ZoneListComponent implements OnInit {
-  displayedColumns = ['position', 'name', 'actions'];
+  displayedColumns = ['position', 'name', 'longLat', 'actions'];
 
   zones;
 

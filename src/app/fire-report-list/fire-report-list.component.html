@@ -8,7 +8,13 @@
             [attr.src]="getThumbnail(report?.payload?.doc?.data()?.source)"
           />
         </div>
-        <p>{{ report?.payload?.doc?.data()?.details }}</p>
+        <div class="details">
+          <p>{{ report?.payload?.doc?.data()?.details }}</p>
+          <mat-chip color="accent" selected>
+            Veried
+          </mat-chip>
+        </div>
+
         <button
           mat-raised-button
           color="accent"

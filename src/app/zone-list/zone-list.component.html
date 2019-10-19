@@ -2,17 +2,29 @@
 <div class="zone-list">
   <mat-table #table [dataSource]="zones" matSort class="mat-cell">
     <ng-container matColumnDef="position">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Id</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Code</mat-header-cell>
       <mat-cell *matCellDef="let row">{{
         row.payload.doc.data().code
       }}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Title</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
       <mat-cell *matCellDef="let row">{{
         row.payload.doc.data().name
       }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="longLat">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Longlat</mat-header-cell
+      >
+      <mat-cell *matCellDef="let row">
+        <ng-container *ngIf="row?.payload?.doc?.data()?.longLat"
+          >long: {{ row?.payload?.doc?.data()?.longLat?.long }}, lat:
+          {{ row?.payload?.doc?.data()?.longLat?.lat }}</ng-container
+        ></mat-cell
+      >
     </ng-container>
 
     <!-- actions -->
