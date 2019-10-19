@@ -1,5 +1,7 @@
 # NotifireAdmin
 
+[![CircleCI](https://circleci.com/gh/tinker-hub/notifire-admin.svg?style=svg)](https://circleci.com/gh/tinker-hub/notifire-admin)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
 ## Development server
