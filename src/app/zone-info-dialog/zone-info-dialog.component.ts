@@ -50,7 +50,7 @@ export class ZoneInfoDialogComponent implements OnInit {
       code: form.code,
       name: form.name,
       description: form.description,
-      longLat: { long: form.longitude, lat: form.longitude },
+      longLat: { long: form.longitude, lat: form.latitude },
     };
     if (this.zone.id) {
       this.update({ ...zone, id: this.zone.id });
