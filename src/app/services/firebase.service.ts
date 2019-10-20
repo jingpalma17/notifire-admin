@@ -10,7 +10,7 @@ export class FirebaseService {
 
   sendSMS(data) {
     return this.http.post<{}>(
-      'https://a5d1fdb4.ngrok.io/api/zones/send-fire-alerts',
+      'https://92c1e5f2.ngrok.io/api/zones/send-fire-alerts',
       data,
     );
   }
